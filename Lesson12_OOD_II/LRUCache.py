@@ -44,5 +44,5 @@ def main(search_engine):
             print(result)
 
 
-search_engine = BOWInvertedIndexEngineWithCache()
-main(search_engine)
+BOWInvert_cache_search_engine = BOWInvertedIndexEngineWithCache()
+main(BOWInvert_cache_search_engine)

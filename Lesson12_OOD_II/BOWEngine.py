@@ -42,20 +42,20 @@ class BOWEngine(SearchEngineBase):
         return set(word_list)
 
 
-# def main(search_engine):
-#     for file_path in ['1.txt', '2.txt', '3.txt', '4.txt', '5.txt']:
-#         search_engine.add_corpus('./input/'+file_path)
-#
-#     while True:
-#         query = input()
-#         # query = 'i have a dream'
-#         results = search_engine.search(query)
-#         print('found {} results(s):'.format(len(results)))
-#         for result in results:
-#             print(result)
-#
-#
-# search_engine = BOWEngine()
-# main(search_engine)
+def main(search_engine):
+    for file_path in ['1.txt', '2.txt', '3.txt', '4.txt', '5.txt']:
+        search_engine.add_corpus('./input/'+file_path)
+
+    while True:
+        query = input()
+        # query = 'i have a dream'
+        results = search_engine.search(query)
+        print('found {} results(s):'.format(len(results)))
+        for result in results:
+            print(result)
+
+
+BOW_search_engine = BOWEngine()
+main(BOW_search_engine)
 
 

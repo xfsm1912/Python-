@@ -66,18 +66,18 @@ class BOWInvertedIndexEngine(SearchEngineBase):
         return set(word_list)
 
 
-# def main(search_engine):
-#     for file_path in ['1.txt', '2.txt', '3.txt', '4.txt', '5.txt']:
-#         search_engine.add_corpus('./input/'+file_path)
-#
-#     while True:
-#         query = input()
-#         # query = 'i have a dream'
-#         results = search_engine.search(query)
-#         print('found {} results(s):'.format(len(results)))
-#         for result in results:
-#             print(result)
+def main(search_engine):
+    for file_path in ['1.txt', '2.txt', '3.txt', '4.txt', '5.txt']:
+        search_engine.add_corpus('./input/'+file_path)
+
+    while True:
+        query = input()
+        # query = 'i have a dream'
+        results = search_engine.search(query)
+        print('found {} results(s):'.format(len(results)))
+        for result in results:
+            print(result)
 
 
-# search_engine = BOWInvertedIndexEngine()
-# main(search_engine)
+BOWInvert_search_engine = BOWInvertedIndexEngine()
+main(BOWInvert_search_engine)
